@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>star</title>
+        <title>portfolio 3 column</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <head runat="server">
@@ -140,11 +140,9 @@
                 <div class="row">
                     <div class="col-md-16 col-sm-16 col-xs-16">
                     </div>
-                    <div style=" background:url(img/mini.jpg);background-repeat:no-repeat;background-size:cover" >
-
                     <div class="portfolio-content">
                         <!-- single-portfolio start -->
-                        
+                        <div style="background:url(img/mini.jpg);">
                         <?php
                             $mysqli_IP = "140.138.150.147";
                             $User = "student";
@@ -159,7 +157,7 @@
                                 mysqli_close($link);
                             }
                             else{
-                            $whether_exist = mysqli_query($link,"select star_name from star_info where star_name like '%".$_POST["star_name"]."%' ;");
+                            $whether_exist = mysqli_query($link,"select star_name from star_info where star_name = '".$_POST["star_name"]."' ;");
                             $row = mysqli_fetch_row($whether_exist);
                             if ($whether_exist==[] || $row==[]){
                                 $test = 1;
@@ -168,10 +166,30 @@
                             }
                             else{
                                 $test = 2;
-                                $result_que = "select * from star_info where star_name like '%".$_POST["star_name"]."%';";
-                                $result = mysqli_query($link,$result_que);
-                                while($data= mysqli_fetch_row($result))
-                                    echo '<b>Name: </b>'.$data[0]."<br><b>BirthDay: </b>".$data[4]."<br><b>Gender: </b>".$data[1]."<br><b>Hometown: </b>".$data[3]."<br><b>Job: </b>".$data[5]."<br><b>Weibo Fans: </b>".$data[6]."<br><br><br>";
+                                $name_que = "select star_name from star_info where star_name='".$_POST["star_name"]."';";
+                                $birth_que = "select birth from star_info where star_name='".$_POST["star_name"]."';";
+                                $gen_que = "select gender from star_info where star_name='".$_POST["star_name"]."';";
+                                $birpl_que = "select bir_place from star_info where star_name='".$_POST["star_name"]."';";
+                                $job_que = "select job from star_info where star_name='".$_POST["star_name"]."';";
+                                $fan_que = "select weibo_fans from star_info where star_name='".$_POST["star_name"]."';";
+                                $name = mysqli_query($link,$name_que);
+                                $birth = mysqli_query($link,$birth_que);
+                                $gender = mysqli_query($link,$gen_que);
+                                $place = mysqli_query($link,$birpl_que);
+                                $job = mysqli_query($link,$job_que);
+                                $fan = mysqli_query($link,$fan_que);
+                                while($data = mysqli_fetch_row($name))  
+                                    echo '<div style="Color:red"><b>Name: </b>'.$data[0]."<br></div>";
+                                while($data = mysqli_fetch_row($birth))  
+                                    echo '<div style="Color:red"><b>BirthDay: </b>'.$data[0]."<br></div>";
+                                while($data = mysqli_fetch_row($gender))  
+                                    echo '<div style="Color:red"><b>Gender: </b>'.$data[0]."<br></div>";
+                                while($data = mysqli_fetch_row($place))  
+                                    echo '<div style="Color:red"><b>Hometown: </b>'.$data[0]."<br></div>";
+                                while($data = mysqli_fetch_row($job))  
+                                    echo '<div style="Color:red"><b>Job: </b>'.$data[0]."<br></div>";
+                                while($data = mysqli_fetch_row($fan))  
+                                    echo '<div style="Color:red"><b>Weibo Fans: </b>'.$data[0]."<br></div>";
                                 mysqli_close($link);
                                 }
                             } 
@@ -187,13 +205,13 @@
                             }
 
                             ?>
-                        
+                            </div>
                         <div class="portfolio-menu">
                             <ul>
                                 <li><a href="SEARCH.html">BACK TO SEARCH</a></li>
                             </ul>					
                         </div>
-                        <br><br><br><br><br><br><br><br><br><br>
+                            
                                                                     <!-- single-portfolio end -->
                                                             
                                                                 </div>
