@@ -1,0 +1,487 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Stars</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <head runat="server">
+                <meta charset="UTF-8">
+                <title>明天不上课</title>
+                <script src="echarts.js" type="text/javascript"></script>
+
+		<!-- favicon
+		============================================ -->		
+        <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+		
+		<!-- Google Fonts
+		============================================ -->
+        <link href='https://fonts.googleapis.com/css?family=Raleway:400,200,300,500,600,700,100' rel='stylesheet' type='text/css'>  
+        
+        <!-- Bootstrap CSS
+		============================================ -->		
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        
+		<!-- Bootstrap CSS
+		============================================ -->
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        
+		<!-- owl.carousel CSS
+		============================================ -->
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <link rel="stylesheet" href="css/owl.theme.css">
+        <link rel="stylesheet" href="css/owl.transitions.css">
+        
+        <!-- nivo slider CSS
+		============================================ -->
+		<link rel="stylesheet" href="lib/css/nivo-slider.css" type="text/css" />
+		<link rel="stylesheet" href="lib/css/preview.css" type="text/css" media="screen" />
+        
+        <!-- animate CSS
+		============================================ -->
+        <link rel="stylesheet" href="css/animate.css">
+        
+        <!-- meanmenu.min CSS
+		============================================ -->
+        <link rel="stylesheet" href="css/meanmenu.min.css">
+        
+        <!-- jQuery-ui CSS
+		============================================ -->
+        <link rel="stylesheet" href="css/jQuery-ui.css">
+        
+		<!-- normalize CSS
+		============================================ -->
+        <link rel="stylesheet" href="css/normalize.css">
+        
+		<!-- main CSS
+		============================================ -->
+        <link rel="stylesheet" href="css/main.css">
+        
+		<!-- style CSS
+		============================================ -->
+        <link rel="stylesheet" href="style.css">
+        
+		<!-- responsive CSS
+		============================================ -->
+        <link rel="stylesheet" href="css/responsive.css">
+        
+		<!-- modernizr JS
+		============================================ -->		
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+
+           <!--header-area start-->
+    <div class="header-area home1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="classic-logo">
+                            <a href="index.html">
+                                    <img src="img/NEWLOGO.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hidden-xs hidden-sm col-md-6 col-lg-6">
+                        <div class="header-menu">
+                            <ul id="nav">
+                                <li><a href="index.html">HOME</a></li>
+                                <li><a href="VIDEONUMBER.html">SUMMARY</a>
+                                    <div class="sub-menu">
+                                        <ul>
+                                            <li><a href="VIDEONUMBER.html">VIDEO NUMBERS</a></li>
+                                            <li><a href="VIP.html">VIP CONDITION</a></li>
+                                            <li><a href="RANKINGS.html">RANKINGS</a></li>
+                                            <li><a href="STARS.html">STARS</a></li>
+                                            <li><a href="WEBSITE.html">WEBSITE INFO</a></li>
+                                        </ul>
+                                </li>
+                                   
+                                <li><a href="SEARCH.html">SEARCH</a></li>
+                                <li><a href="INTERACTION.html">INTERACTION</a></li>
+                              
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       
+        </div>
+        
+        <!--header-area start-->
+      
+      
+        
+        </div>
+        <!--header-area start-->
+        <!--portfolio area start-->
+        <div class="porfolio-home">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-16">
+                        <div class="protfolio-menu">
+                            <ul>
+                                <li><a href="">Home</a> <i class="fa fa-angle-right"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- portfolio-area start -->
+        <div class="portfolio-area column-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-16 col-sm-16 col-xs-16">
+                        <div class="portfolio-menu">
+                            <ul>
+                                
+                                <li class="filter" data-filter=".STARINFO" >STAR INFO</li>
+
+                            </ul>					
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <!-- single-portfolio start -->
+                        <div class="col-md-4 col-sm-4 col-xs-12 mix FOLLOWERS">
+                                        <div id="main" style="width: 600px;height:400px;left:150px;"></div>
+                                                    
+                                        <script type="text/javascript">// 基于准备好的dom，初始化echarts实例
+                                             // 基于准备好的dom，初始化echarts实例
+                                            var myChart = echarts.init(document.getElementById('main'));
+                                                    
+                                            var dataChina = [
+                [16,80.755494,"赵丽颖","女","中国河北省廊坊市","10.16","演员"],
+                [21,20.705592,"景甜","女","中国陕西省西安市","7.21","演员"],
+                [9,46.718076, "杨洋", "男", "中国上海",  "9.9", "演员"], 
+                [28,65.788956,"易烊千玺","男","中国湖南怀化","11.28","演员/歌手/舞者"],
+                [28,35.917806,"杜海涛","男","中国辽宁沈阳","10.28","演员/主持人"],
+                [31,14.596929,"谭松韵","女","中国四川泸州","5.31","演员/舞者"],
+                [26,10.477654,"胡一天","男","中国浙江杭州","12.26","演员"],
+                [25,4.454395,"彭昱畅","男","中国江西新余","10.25","演员"],
+                [21,1.348973,"赵英博","男","中国山东烟台","8.21","演员/歌手/平面模特"],
+                [30,61.398764,"罗志祥","男","中国台湾","7.30","演员/歌手/舞者/主持人"],
+                [4,68.953726,"陈乔恩","女","中国台湾","4.4","演员/歌手/主持人"],
+                [3,53.546783,"刘烨","男","中国吉林长春","3.3","演员"],
+                [6,121.143074,"谢娜","女","中国四川德阳","5.6","演员/歌手/主持人"],
+                [7,17.316181,"小沈阳","男","中国辽宁铁岭","5.7","演员/歌手/主持人/导演"],
+                [23,17.617864,"霍思燕","女","中国北京","10.23","演员"],
+                [28,108.307862,"何炅","男","中国湖南长沙","4.28","演员/主持人/歌手"],
+                [8,12.397864,"陈小春","男","中国广东惠州","7.8","演员/歌手"],
+                [12,20.438972,"魏大勋","男","中国吉林","4.12","演员"],
+                [7,44.444614,"张艺兴","男","中国湖南长沙","10.7","演员/歌手"],
+                [4,18.376753,"张若昀","男","中国北京","8.4","演员"],
+                [27,19.213564,"李沁","女","中国江苏苏州","9.27","演员"],
+                [30,24.445839,"钟汉良","男","中国香港","11.30","导演/演员/歌手/舞者"],
+                [10,4.558329,"金世佳","男","中国上海","11.10","演员"],
+                [12,99.848592,"杨幂","女","中国北京","9.12","演员/歌手/制片人"],
+                [6,26.653920,"陆毅","男","中国上海","1.6","演员/歌手"],
+                [16,30.604902,"孙红雷","男","中国黑龙江哈尔滨","8.16","演员"],
+                [6,70.034950,"唐嫣","女","中国上海","12.6","演员/歌手/制片人"],
+                [29,7.384950,"李健","男","中国河北","10.29","演员"],
+                [8,2.68490,"张嘉译","男","中国陕西西安","4.8","演员/监制"],
+                [2,5.359203,"杨烁","男","中国黑龙江伊春","1.2","演员"],
+                [26,8.90394,"陈道明","男","中国天津","4.26","演员/歌手/作词/配音"],
+                [25,1.134950,"郭家铭","男","中国黑龙江哈尔滨","6.25","演员/歌手/作曲"],
+                [22,50.394059,"郑爽","女","中国辽宁沈阳","8.22","演员/歌手"],
+                [6,5.689930,"杨子姗","女","中国江苏南京","11.6","演员/歌手"],
+                [2,17.364829,"蒋劲夫","男","中国湖南长沙","9.2","演员/模特"],
+                [19,3.574892,"董洁","女","中国辽宁大连","4.19","演员/歌手/配音"],
+                [27,27.693820,"张智霖","男","中国香港","8.27","演员/歌手"],
+                [16,11.993049,"朱一龙","男","中国湖北武汉","4.16","演员"],
+                [26,50.392045,"孙俪","女","中国上海","9.26","演员/歌手"],
+                [6,40.223940,"杨紫","女","中国北京","11.6","演员/歌手/配音"],
+                [14,13.804859,"马思纯","女","中国安徽蚌埠","3.14","演员"],
+                [22,11.430495,"靳东","男","中国山东济宁","12.22","演员/制片人"],
+                [9,5.753290,"潘粤明","男","中国北京","5.9","演员/主持人"],
+                [27,10.994839,"陈柏霖","男","中国台湾台北","8.27","演员/歌手"],
+                [5,9.193940,"吴秀波","男","中国北京","9.5","演员/歌手/作词/作曲/制片人/主持人/监制/配音"],
+                [17,10.693829,"徐海乔","男","中国山东济南","4.17","演员/配音"],
+                [31,26.959503,"周冬雨","女","中国河北石家庄","1.31","演员/歌手/配音/出品人"],
+                [9,3.448593,"周渝民","男","中国台湾宜兰","6.9","演员/歌手"],
+                [5,7.793849,"金晨","女","中国山东济南","9.5","演员/模特"],
+                [3,56.965830,"迪丽热巴","女","中国新疆乌鲁木齐","6.3","演员"],
+                [24,16.953920,"汪东城","男","中国台湾台北","8.24","演员/歌手/制片人/主持人/模特"],
+                [21,11.228394,"朱亚文","男","中国江苏盐城","4.21","演员"],
+                [19,10.829340,"郑元畅","男","中国台湾台中","6.19","演员/歌手/模特"],
+                [25,7.053929,"朱茵","女","中国香港","10.25","演员/歌手"],
+                [8,6.142835,"张卫健","男","中国香港","2.8","演员/歌手"],
+                [7,1.834859,"陈浩民","男","中国香港","10.7","演员/歌手"],
+                [17,34.95829,"聂远","男","中国贵州黔东南","3.17","演员/歌手"],
+                [13,13.463829,"黄宗泽","男","中国香港","12.13","演员/歌手/主持人"],
+                [9,1.589238,"钟嘉欣","女","加拿大温哥华","4.9","演员/歌手/作曲"],
+                [19,1.449205,"任达华","男","中国香港","3.19","导演/演员/制片人/模特"],
+                [6,10.403859,"胡杏儿","女","中国香港","11.6","演员/歌手"],
+                [24,30.214850,"彭于晏","男","中国台湾澎湖","3.24","演员/歌手/模特"],
+                [11,2.44492,"林超贤","男","中国香港","5.11","导演/演员/编剧/制片人/动作指导"],
+                [19,3.552958,"葛优","男","中国北京","4.19","演员"],
+                [2,3.459203,"张艺谋","男","中国陕西西安","4.2","导演/演员/编剧/制片人/摄影师"],
+                [26,74.45829,"李连杰","男","中国北京","4.26","导演/演员/编剧/制片人/监制/运动员/企业家/慈善家"]
+            ];
+
+                                            var dataEA = [
+                                                [25,5.7680,"西恩·奥斯汀","男","美国加利福尼亚州","02.25","导演/演员/编剧/制片人/配音"],
+                                                [4,3.279,"约翰·迪·玛吉欧","男","美国新泽西州","09.04","演员/制片人/配音"],
+                                                [25,6.97,"凯文·迈克尔·理查德森","男","美国纽约","10.25","演员/歌手/配音"],
+                                                [8,2.45,"JoshKeaton","男","美国加利福尼亚州","02.08","演员"],
+                                                [28,8.76,"保罗·伊丁","男","美国克利夫兰","03.28","演员/监制/配音"],
+                                                [6,4.467,"科维斯·博卡耶","男","美国加利福尼亚州","04.06","演员"],
+                                                [3,3.345678,"佩顿•里德","男","美国北卡罗莱纳州","7.3","导演/演员/编剧/制片人/监制"],
+                                                [2,20.349582,"道恩•强森","男","美国加利福尼亚州","5.2","演员/制片人/监制/配音/特技"],
+                                                [27,0.358694,"瓦格纳•马拉","男","巴西巴伊亚州萨尔瓦多","6.27","演员/制片人"],
+                                                [31,3.184920,"安东尼•罗素","男","美国俄亥俄州","1.31","导演/编剧/制片人"],
+                                                [25,5.82934,"克雷格•罗宾逊","男","美国芝加哥","10.25","演员/歌手/编剧/制片人/监制"],
+                                                [11,11.056649,"克里斯•海姆斯沃斯","男","澳大利亚墨尔本","8.11","演员/配音"],
+                                                [6,7.869485,"保罗•路德","男","美国新泽西州","4.6","演员/编剧/制片人/监制"],
+                                                [26,24.37384,"杰森•斯坦森","男","英国德比郡","7.26","演员/制片人/配音/运动员/特技"],
+                                                [13,2.6300,"汤姆·肯尼","男","美国纽约州","07.13","演员/歌手/编剧/制片人/配音"]
+                                            ];
+
+                                            var dataJS = [
+                                                [21,2.48000,"森田成一","男","本东京","10.21","演员/声优"],
+                                                [11,1.0250,"杉田智和","男","本埼玉县","10.11","歌手/作家/声优/解说"],
+                                                [29,1.25,"古川慎","男","本熊本县","09.29","配音"],
+                                                [28,0.346,"丰永利行","男","本东京","04.28","演员/歌手/声优"],
+                                                [25,1.89,"川上伦子","女","本东京","04.25","配音"],
+                                                [7,2.4076,"山下大辉","男","本静冈县","09.07","配音"],
+                                                [5,2.80,"子安武人","男","本横滨","05.05","歌手/声优"],
+                                                [4,7.4600,"平川大辅","男","本","06.04","配音"],
+                                                [8,5.345600,"兴津和幸","男","本兵库县","03.08","声优"],
+                                                [26,2.650,"小林沙苗","女","本静冈","01.26","演员/配音"],
+                                                [14,2.134,"村濑步","男","美国洛杉矶","12.14","声优"],
+                                                [13,1.70,"五十岚裕美","女","本北海道","12.13","配音"],
+                                                [30,2.733,"满岛真之介","男","本冲绳县","05.30","演员"],
+                                                [18,5.80,"河西健吾","男","本大阪","02.18","配音"],
+                                                [23,5.2380,"小向文世","男","本北海道","01.23","演员/配音"],
+                                                [2,15.2300,"泽城美雪","女","本长野县","06.02","演员/声优"],
+                                                [27,0.2300,"种崎敦美","女","本大分县","09.27","配音"],
+                                                [6,4.526,"岛崎信长","男","本宫城县","12.06","声优"],
+                                                [19,2.600,"入野自由","男","本东京","02.19","演员/歌手/声优"],
+                                                [20,0.890,"堀江由衣","女","本东京","09.20","歌手/配音"],
+                                                [5,9.5400,"小野贤章","男","本福冈县","10.05","导演/演员/歌手/声优"],
+                                                [5,0.450,"原纱友里","女","本东京","11.05","配音"],
+                                                [4,0.290,"福岛润","男","本爱媛县","09.04","配音"],
+                                                [27,9.400,"悠木碧","女","本千叶","03.27","演员/歌手/声优"],
+                                                [27,0.230,"平田广明","女","本千叶","03.27","演员/歌手/声优"],
+                                                [7,2.150,"特克斯·艾弗里","男","本东京","08.07","演员/声优"],
+                                                [26,1.800,"迪恩·凯恩","男","美国德克萨斯州","02.26","导演/演员/编剧/配音"],
+                                                [12,0.689,"伊薇特·尼科尔·布朗","女","美国俄亥俄州","08.12","演员/制片人/配音"]
+                                            ];
+
+                                            var schema = [
+                                                {name: 'date', index: 0, text: 'Birth Date'},
+                                                {name: 'fans', index: 1, text: 'Weibo Fans'},
+                                                {name: 'name', index: 2, text: 'Name'},
+                                                {name: 'gender', index: 3, text: 'Gender'},
+                                                {name: 'place', index: 4, text: 'Birth Place'},
+                                                {name: 'birthday', index: 5, text: 'Birth'},
+                                                {name: 'job', index: 6, text: 'Job'}
+                                            ];
+
+                                            var itemStyle = {
+                                                normal: {
+                                                    opacity: 0.8,
+                                                    shadowBlur: 0,
+                                                    shadowOffsetX: 0,
+                                                    shadowOffsetY: 0,
+                                                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                                }
+                                            };
+
+                                            option = {
+                                                backgroundColor: '#FFFFFF',
+                                                color: [
+                                                    '#FF8C00', '#FFC0CB', '#EE82EE'
+                                                ],
+                                                legend: {
+                                                    y: 'top',
+                                                    data: ['China', 'Europe and America', 'Japan and South Korea','Others'],
+                                                    textStyle: {
+                                                        color: '#000000',
+                                                        fontSize: 16
+                                                    }
+                                                },
+                                                grid: {
+                                                    x: '10%',
+                                                    x2: 150,
+                                                    y: '18%',
+                                                    y2: '10%'
+                                                },
+                                                tooltip: {
+                                                    padding: 10,
+                                                    backgroundColor: '#222',
+                                                    borderColor: '#777',
+                                                    borderWidth: 1,
+                                                    formatter: function (obj) {
+                                                        var value = obj.value;
+                                                        return '<div style="border-bottom: 1px solid rgba(255,255,255,.3); font-size: 18px;padding-bottom: 7px;margin-bottom: 7px">'
+                                                            + obj.seriesName + ' ' + value[2] + ' '
+                                                            + '</div>'
+                                                            + schema[1].text + '：' + value[1] + 'M' + '<br>'
+                                                            + schema[3].text + '：' + value[3] + '<br>'
+                                                            + schema[4].text + '：' + value[4] + '<br>'
+                                                            + schema[5].text + '：' + value[5] + '<br>'
+                                                            + schema[6].text + '：' + value[6] + '<br>';
+                                                    }
+                                                },
+                                                xAxis: {
+                                                    type: 'value',
+                                                    name: 'Birthday Date',
+                                                    nameGap: 16,
+                                                    nameTextStyle: {
+                                                        color: '#000000',
+                                                        fontSize: 14
+                                                    },
+                                                    max: 31,
+                                                    splitLine: {
+                                                        show: false
+                                                    },
+                                                    axisLine: {
+                                                        lineStyle: {
+                                                            color: '#000000'
+                                                        }
+                                                    }
+                                                },
+                                                yAxis: {
+                                                    type: 'value',
+                                                    name: 'Fans Amount',
+                                                    nameLocation: 'end',
+                                                    nameGap: 20,
+                                                    nameTextStyle: {
+                                                        color: '#000000',
+                                                        fontSize: 16
+                                                    },
+                                                    axisLine: {
+                                                        lineStyle: {
+                                                            color: '#000000'
+                                                        }
+                                                    },
+                                                    splitLine: {
+                                                        show: false
+                                                    }
+                                                },
+                                                visualMap: [
+                                                    {
+                                                        left: 'right',
+                                                        top: '40%',
+                                                        dimension: 1,
+                                                        min: 0,
+                                                        max: 140,
+                                                        itemWidth: 30,
+                                                        itemHeight: 120,
+                                                        calculable: true,
+                                                        precision: 0.1,
+                                                        text: ['size of circle: fans amount'],
+                                                        textGap: 30,
+                                                        textStyle: {
+                                                            color: '#8B008B'
+                                                        },
+                                                        inRange: {
+                                                            symbolSize: [10, 70]
+                                                        },
+                                                        outOfRange: {
+                                                            symbolSize: [10, 70],
+                                                            color: ['rgba(255,255,255,.2)']
+                                                        },
+                                                        controller: {
+                                                            inRange: {
+                                                                color: ['#8B008B']
+                                                            },
+                                                            outOfRange: {
+                                                                color: ['#444']
+                                                            }
+                                                        }
+                                                    },
+                                                ],
+                                                series: [
+                                                    {
+                                                        name: 'China',
+                                                        type: 'scatter',
+                                                        itemStyle: itemStyle,
+                                                        data: dataChina
+                                                    },
+                                                    {
+                                                        name: 'Europe and America',
+                                                        type: 'scatter',
+                                                        itemStyle: itemStyle,
+                                                        data: dataEA
+                                                    },
+                                                    {
+                                                        name: 'Japan and South Korea',
+                                                        type: 'scatter',
+                                                        itemStyle: itemStyle,
+                                                        data: dataJS
+                                                    },
+                                                
+                                                ]
+                                            };
+                                            myChart.setOption(option);
+                                        </script>
+
+                                                                    </div>
+                                                                    <!-- single-portfolio end -->
+                                                            
+                                                                </div>
+                                                            </div>
+                                                        
+                                                        </div>
+                                                    </div>
+                                                    <!-- portfolio-area end -->
+
+                                      
+        
+        
+        
+        <!-- jquery
+		============================================ -->		
+        <script src="js/vendor/jquery-1.11.3.min.js"></script>
+        
+        <!-- price-slider JS
+		============================================ -->		
+        <script src="js/jquery-price-slider.js"></script>
+        
+		<!-- bootstrap JS
+		============================================ -->		
+        <script src="js/bootstrap.min.js"></script>
+		<!-- wow JS
+		============================================ -->		
+        <script src="js/wow.min.js"></script>
+		
+        <!-- Nivo slider js
+		============================================ --> 		
+		<script src="lib/js/jquery.nivo.slider.js" type="text/javascript"></script>
+		<script src="lib/home.js" type="text/javascript"></script>	
+        	
+		<!-- meanmenu JS
+		============================================ -->		
+        <script src="js/jquery.meanmenu.js"></script>
+        
+		<!-- owl.carousel JS
+		============================================ -->		
+        <script src="js/owl.carousel.min.js"></script>
+        
+		<!-- mixitup js -->
+        <script src="js/jquery.mixitup.min.js"></script>
+        
+        <!-- jquery.collapse js -->
+        <script src="js/jquery.collapse.js"></script>
+        
+        <!-- scrollUp JS
+		============================================ -->		
+        <script src="js/jquery.scrollUp.min.js"></script>
+        
+		<!-- plugins JS
+		============================================ -->		
+        <script src="js/plugins.js"></script>
+        
+		<!-- main JS
+		============================================ -->		
+        <script src="js/main.js"></script>
+    </body>
+</html>

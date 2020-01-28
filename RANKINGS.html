@@ -1,0 +1,1069 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Rankings</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <head runat="server">
+                <meta charset="UTF-8">
+                
+                <script src="echarts.js" type="text/javascript"></script>
+                <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+                <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+                <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+                <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+                <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+                <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+                <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+                <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+                <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
+		<!-- favicon
+		============================================ -->		
+        <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+		
+		<!-- Google Fonts
+		============================================ -->
+        <link href='https://fonts.googleapis.com/css?family=Raleway:400,200,300,500,600,700,100' rel='stylesheet' type='text/css'>  
+        
+        <!-- Bootstrap CSS
+		============================================ -->		
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        
+		<!-- Bootstrap CSS
+		============================================ -->
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        
+		<!-- owl.carousel CSS
+		============================================ -->
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <link rel="stylesheet" href="css/owl.theme.css">
+        <link rel="stylesheet" href="css/owl.transitions.css">
+        
+        <!-- nivo slider CSS
+		============================================ -->
+		<link rel="stylesheet" href="lib/css/nivo-slider.css" type="text/css" />
+		<link rel="stylesheet" href="lib/css/preview.css" type="text/css" media="screen" />
+        
+        <!-- animate CSS
+		============================================ -->
+        <link rel="stylesheet" href="css/animate.css">
+        
+        <!-- meanmenu.min CSS
+		============================================ -->
+        <link rel="stylesheet" href="css/meanmenu.min.css">
+        
+        <!-- jQuery-ui CSS
+		============================================ -->
+        <link rel="stylesheet" href="css/jQuery-ui.css">
+        
+		<!-- normalize CSS
+		============================================ -->
+        <link rel="stylesheet" href="css/normalize.css">
+        
+		<!-- main CSS
+		============================================ -->
+        <link rel="stylesheet" href="css/main.css">
+        
+		<!-- style CSS
+		============================================ -->
+        <link rel="stylesheet" href="style.css">
+        
+		<!-- responsive CSS
+		============================================ -->
+        <link rel="stylesheet" href="css/responsive.css">
+        
+		<!-- modernizr JS
+		============================================ -->		
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+
+           <!--header-area start-->
+    <div class="header-area home1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="classic-logo">
+                            <a href="index.html">
+                                <img src="img/NEWLOGO.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hidden-xs hidden-sm col-md-6 col-lg-6">
+                        <div class="header-menu">
+                            <ul id="nav">
+                                <li><a href="index.html">HOME</a></li>
+                                <li><a href="VIDEONUMBER.html">SUMMARY</a>
+                                    <div class="sub-menu">
+                                        <ul>
+                                            <li><a href="VIDEONUMBER.html">VIDEO NUMBERS</a></li>
+                                            <li><a href="VIP.html">VIP CONDITION</a></li>
+                                            <li><a href="RANKINGS.html">RANKINGS</a></li>
+                                            <li><a href="STARS.html">STARS</a></li>
+                                            <li><a href="WEBSITE.html">WEBSITE INFO</a></li>
+                                        </ul>
+                                </li>
+                                   
+                                <li><a href="SEARCH.html">SEARCH</a></li>
+                                <li><a href="INTERACTION.html">INTERACTION</a>
+                                    <div class="sub-menu">
+                                        <ul>
+                                            <li><a href="DESIGN.html">DESIGN</a></li>
+                                            <li><a href="MAPPING.html">MAPPING</a></li>
+                                            <li><a href="RECOMMENDATION.html">RECOMMENDATION</a></li>
+                                        </ul>
+                                
+                                </li>
+                              
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       
+        </div>
+        
+        <!--header-area start-->
+      
+      
+            <!--header-bottom-->
+            <div class="header-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="hidden-xs col-sm-8 col-md-8">
+                            
+
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+ 
+        </div>
+        <!--header-area start-->
+        <!--portfolio area start-->
+        <div class="porfolio-home">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-16">
+                        <div class="protfolio-menu">
+                            <ul>
+                                <li><a href="">Home</a> <i class="fa fa-angle-right"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- portfolio-area start -->
+        <div class="portfolio-area column-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-16 col-sm-16 col-xs-16">
+                        <div class="portfolio-menu">
+                            <ul>
+                                <li class="filter" data-filter=".ALL" >ALL</li>
+                                <li class="filter" data-filter=".VIEWS" >VIEWS</li>
+                                <li class="filter" data-filter=".GRADE">GRADE</li>
+                                <li class="filter" data-filter=".AREA">AREA</li>
+
+                              
+                            </ul>					
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <!-- single-portfolio start -->
+                        <div class="col-md-8 col-sm-8 col-xs-12 mix ALL VIEWS">         
+                            <div id="main7" style="width:800px;height:600px;left:50px;"></div>  
+                            <script type="text/javascript">// 基于准备好的dom，初始化echarts实例
+                                var myChart7 = echarts.init(document.getElementById('main7'));
+                                option = {
+                                    color: ['#C6E2FF'],
+                                    title: {
+                                        text: 'Top 15 video view(youku)',
+                                        textStyle: {
+                                            color: '#6e7074'
+                                        }
+                                    },
+                                    tooltip: {
+                                        trigger: 'axis',
+                                        axisPointer: {
+                                            type: 'shadow'
+                                        }
+                                    },
+                                    legend: {
+                                        data: ['video_view']
+                                    },
+                                    grid: {
+                                        left: '3%',
+                                        right: '4%',
+                                        bottom: '3%',
+                                        containLabel: true
+                                    },
+                                    xAxis: {
+                                        type: 'value',
+                                        boundaryGap: [0, 0.01]
+                                    },
+                                    yAxis: {
+                                        type: 'category',
+                                        data: ['兄弟', '区小队', '三生三世十里桃花', '微微一笑很倾城', '火星情报局 第四季', '我们的四十年', '凉生，我们可不可以不忧伤 TV版', '蒙面唱将猜猜猜 第三季', '镇魂', '蚀日风暴', '幸福一家人', '回到明朝当王爷之杨凌传', '创业时代', '原来你还在这里', '我的保姆手册']
+                                    },
+                                    series: [
+                                        {
+                                            name: 'video view',
+                                            type: 'bar',
+                                            data: [229000000, 237000000, 274200000, 287100000, 289600000, 292800000, 301300000, 379200000, 382800000, 706200000, 1309000000, 1434000000, 1535000000, 2216000000, 5407000000]
+                                        }
+                                    ]
+                                };
+                                myChart7.setOption(option);
+                            </script>
+                            <div id="main5" style="width:800px;height:600px;left:50px;"></div>  
+                            <script type="text/javascript">// 基于准备好的dom，初始化echarts实例
+                                myChart7.setOption(option);
+                                
+                                var myChart5 = echarts.init(document.getElementById('main5'));
+                                option = {
+                                    color: ['#C6E2FF'],
+                                    title: {
+                                        text: 'Top 15 video view(Mango Tv)',
+                                        textStyle: {
+                                            color: '#6e7074'
+                                        }
+                                    },
+                                    tooltip: {
+                                        trigger: 'axis',
+                                        axisPointer: {
+                                            type: 'shadow'
+                                        }
+                                    },
+                                    legend: {
+                                        data: ['video_view']
+                                    },
+                                    grid: {
+                                        left: '3%',
+                                        right: '4%',
+                                        bottom: '3%',
+                                        containLabel: true
+                                    },
+                                    xAxis: {
+                                        type: 'value',
+                                        boundaryGap: [0, 0.01]
+                                    },
+                                    yAxis: {
+                                        type: 'category',
+                                        data:['归去来', '因为遇见你', '因为遇见你', '流星花园', '天天向上', '颤抖吧阿部之朵星风云', '寻找爱的冒险', '浪花一朵朵', '夏至未至', '亲爱的王子大人', '楚乔传', '是！尚先生', '流星花园', '旋风少女 第二季', '亲爱的翻译官']
+                                    },
+                                    series: [
+                                        {
+                                            name: 'video view',
+                                            type: 'bar',
+                                            data:[7946900000, 8082300000, 8083400000, 8087100000, 8570000000, 8686400000, 9721200000, 11000000000, 11000000000, 13000000000, 15000000000, 17000000000, 27000000000, 43000000000, 50000000000]
+                                        }
+                                    ]
+                                };
+                                myChart5.setOption(option);
+                        
+                            </script>
+                            <div id="main6" style="width:800px;height:600px;left:50px;"></div>  
+                            <script type="text/javascript">// 基于准备好的dom，初始化echarts实例
+                                
+                                var myChart6 = echarts.init(document.getElementById('main6'));
+                                option = {
+                                    color: ['#C6E2FF'],
+                                    title: {
+                                        text: 'Top 15 video view(iqiyi)',
+                                        textStyle: {
+                                            color: '#6e7074'
+                                        }
+                                    },
+                                    tooltip: {
+                                        trigger: 'axis',
+                                        axisPointer: {
+                                            type: 'shadow'
+                                        }
+                                    },
+                                    legend: {
+                                        data: ['video_view']
+                                    },
+                                    grid: {
+                                        left: '3%',
+                                        right: '4%',
+                                        bottom: '3%',
+                                        containLabel: true
+                                    },
+                                    xAxis: {
+                                        type: 'value',
+                                        boundaryGap: [0, 0.01]
+                                    },
+                                    yAxis: {
+                                        type: 'category',
+                                        data:['生活对我下手了', '区小队', '悍城', '延禧攻略', '惊蛰', '我们的四十年', '黄土高天', '创业时代', '正阳门下小女人', '追捕者', '唐砖', '医妃难囚', '凉生我们可不可以不忧伤', '幸福一家人', '你和我的倾城时光']
+                                    },
+                                    series: [
+                                        {
+                                            name: 'video view',
+                                            type: 'bar',
+                                            data:[441100000, 441900000, 454400000, 468600000, 471400000, 482300000, 482700000, 511500000, 512500000, 534200000, 592200000, 598200000, 606200000, 663100000, 818400000]
+                                        }
+                                    ]
+                                };
+                                myChart6.setOption(option);
+                        
+                            </script>
+                        </div>
+                        <div class="col-md-8 col-sm-8 col-xs-12 mix ALL GRADE">         
+                            <div id="container1" style="width:800px;height:600px;left:50px;"></div>  
+                            <script type="text/javascript">// 基于准备好的dom，初始化echarts实例
+                            var dom1 = document.getElementById("container1");
+                            var myChart1 = echarts.init(dom1);
+                            var app = {};
+                            option = null;
+
+                            app.config = {
+                                rotate: 90,
+                                align: 'left',
+                                verticalAlign: 'middle',
+                                position: 'insideBottom',
+                                distance: 15,
+                                onChange: function () {
+                                    var labelOption = {
+                                        normal: {
+                                            rotate: app.config.rotate,
+                                            align: app.config.align,
+                                            verticalAlign: app.config.verticalAlign,
+                                            position: app.config.position,
+                                            distance: app.config.distance
+                                        }
+                                    };
+                                    myChart.setOption({
+                                        series: [{
+                                            label: labelOption
+                                        }, {
+                                            label: labelOption
+                                        }, {
+                                            label: labelOption
+                                        }, {
+                                            label: labelOption
+                                        }]
+                                    });
+                                }
+                            };
+
+
+                            var labelOption = {
+                                normal: {
+                                    show: true,
+                                    position: app.config.position,
+                                    distance: app.config.distance,
+                                    align: app.config.align,
+                                    verticalAlign: app.config.verticalAlign,
+                                    rotate: app.config.rotate,
+                                    formatter: '{c}  {name|{a}}',
+                                    fontSize: 16,
+                                    rich: {
+                                        name: {
+                                            textBorderColor: '#fcfcfc'
+                                        }
+                                    }
+                                }
+                            };
+
+                            option = {
+                                color: ['#6e7074', '#546570', '#c4ccd3'],
+                                tooltip: {
+                                    trigger: 'axis',
+                                    axisPointer: {
+                                        type: 'shadow'
+                                    }
+                                },
+                                title: {
+                                    text: 'Top 15 video_grade(youku)',
+                                    left: 'center',
+                                    top: 20,
+                                    textStyle: {
+                                        color: '#999'
+                                    }
+                                },
+                                legend: {
+                                    data: ['Forest', 'Steppe', 'Desert', 'Wetland']
+                                },
+                                toolbox: {
+                                    show: true,
+                                    orient: 'vertical',
+                                    left: 'right',
+                                    top: 'center',
+                                    feature: {
+                                        mark: {show: true},
+                                        dataView: {show: true, readOnly: false},
+                                        magicType: {show: true, type: ['line', 'bar', 'stack', 'tiled']},
+                                        restore: {show: true},
+                                        saveAsImage: {show: true}
+                                    }
+                                },
+                                calculable: true,
+                                xAxis: [
+                                    {
+                                        type: 'category',
+                                        axisTick: {show: false},
+                                    }
+                                ],
+                                yAxis: [
+                                    {
+                                        type: 'value'
+                                    }
+                                ],
+                                series: [
+                                    {
+                                        name: '银魂',
+                                        type: 'bar',
+                                        barGap: 0,
+                                        label: labelOption,
+                                        data: [9.9]
+                                    },
+                                    {
+                                        name: '欢乐喜剧人 第二季',
+                                        type: 'bar',
+                                        label: labelOption,
+                                        data: [9.8]
+                                    },
+                                    {
+                                        name: '火星情报局 第二季',
+                                        type: 'bar',
+                                        label: labelOption,
+                                        data: [9.8]
+                                    },
+                                    {
+                                        name: '火星情报局 第一季',
+                                        type: 'bar',
+                                        label: labelOption,
+                                        data: [9.8]
+                                    },
+                                            {
+                                        name: '梦想改造家 第五季',
+                                        type: 'bar',
+                                        barGap: 0,
+                                        label: labelOption,
+                                        data: [9.8]
+                                    },
+                                    {
+                                        name: '我的世界幸运方块 第一季',
+                                        type: 'bar',
+                                        label: labelOption,
+                                        data: [9.8]
+                                    },
+                                    {
+                                        name: '极限挑战 第一季',
+                                        type: 'bar',
+                                        label: labelOption,
+                                        data: [9.8]
+                                    },
+                                    {
+                                        name: '王牌对王牌 第一季1',
+                                        type: 'bar',
+                                        label: labelOption,
+                                        data: [9.8]
+                                    },
+                                            {
+                                        name: '王牌对王牌 第一季2',
+                                        type: 'bar',
+                                        barGap: 0,
+                                        label: labelOption,
+                                        data: [9.8]
+                                    },
+                                    {
+                                        name: '金曲捞 第一季',
+                                        type: 'bar',
+                                        label: labelOption,
+                                        data: [9.8]
+                                    },
+                                    {
+                                        name:  '超神学院',
+                                        type: 'bar',
+                                        label: labelOption,
+                                        data: [9.8]
+                                    },
+                                    {
+                                        name: '一拳超人',
+                                        type: 'bar',
+                                        label: labelOption,
+                                        data: [9.8]
+                                    },
+                                            {
+                                        name:'冰上的尤里',
+                                        type: 'bar',
+                                        label: labelOption,
+                                        data: [9.8]
+                                    },
+                                    {
+                                        name: '潮与虎',
+                                        type: 'bar',
+                                        label: labelOption,
+                                        data: [9.8]
+                                    },
+                                    {
+                                        name: '狐妖小红娘',
+                                        type: 'bar',
+                                        label: labelOption,
+                                        data: [9.7]
+                                    }
+                                ]
+                            };
+                            ;
+                            if (option && typeof option === "object") {
+                                myChart1.setOption(option, true);
+                            }
+                            </script>
+
+                        <div id="container2" style="width:800px;height:600px;left:50px;"></div>  
+                            <script type="text/javascript">// 基于准备好的dom，初始化echarts实例
+                            var dom2 = document.getElementById("container2");
+                            var myChart2 = echarts.init(dom2);
+                            var app = {};
+                            option = null;
+                            app.config = {
+                                rotate: 90,
+                                align: 'left',
+                                verticalAlign: 'middle',
+                                position: 'insideBottom',
+                                distance: 15,
+                                onChange: function () {
+                                    var labelOption = {
+                                        normal: {
+                                            rotate: app.config.rotate,
+                                            align: app.config.align,
+                                            verticalAlign: app.config.verticalAlign,
+                                            position: app.config.position,
+                                            distance: app.config.distance
+                                        }
+                                    };
+                                    myChart.setOption({
+                                        series: [{
+                                            label: labelOption
+                                        }, {
+                                            label: labelOption
+                                        }, {
+                                            label: labelOption
+                                        }, {
+                                            label: labelOption
+                                        }]
+                                    });
+                                }
+                            };
+
+
+                            var labelOption = {
+                                normal: {
+                                    show: true,
+                                    position: app.config.position,
+                                    distance: app.config.distance,
+                                    align: app.config.align,
+                                    verticalAlign: app.config.verticalAlign,
+                                    rotate: app.config.rotate,
+                                    formatter: '{c}  {name|{a}}',
+                                    fontSize: 16,
+                                    rich: {
+                                        name: {
+                                            textBorderColor: '#fcfcfc'
+                                        }
+                                    }
+                                }
+                            };
+
+                            option = {
+                                color: ['#6e7074', '#546570', '#c4ccd3'],
+                                tooltip: {
+                                    trigger: 'axis',
+                                    axisPointer: {
+                                        type: 'shadow'
+                                    }
+                                },
+                                title: {
+                                    text: 'Top 15 video_grade(mango tv)',
+                                    left: 'center',
+                                    top: 20,
+                                    textStyle: {
+                                        color: '#999'
+                                    }
+                                },
+                                legend: {
+                                    data: ['Forest', 'Steppe', 'Desert', 'Wetland']
+                                },
+                                toolbox: {
+                                    show: true,
+                                    orient: 'vertical',
+                                    left: 'right',
+                                    top: 'center',
+                                    feature: {
+                                        mark: {show: true},
+                                        dataView: {show: true, readOnly: false},
+                                        magicType: {show: true, type: ['line', 'bar', 'stack', 'tiled']},
+                                        restore: {show: true},
+                                        saveAsImage: {show: true}
+                                    }
+                                },
+                                calculable: true,
+                                xAxis: [
+                                    {
+                                        type: 'category',
+                                        axisTick: {show: false},
+                                    }
+                                ],
+                                yAxis: [
+                                    {
+                                        type: 'value'
+                                    }
+                                ],
+                                series: [
+                                    {
+                                        name: '大闹天宫',
+                                        type: 'bar',
+                                        barGap: 0,
+                                        label: labelOption,
+                                        data: [9.3]
+                                    },
+                                    {
+                                        name: '解忧杂货店 粤语版',
+                                        type: 'bar',
+                                        label: labelOption,
+                                        data: [9.1]
+                                    },
+                                    {
+                                        name: '你的名字。',
+                                        type: 'bar',
+                                        label: labelOption,
+                                        data: [9.1]
+                                    },
+                                    {
+                                        name: '二十二',
+                                        type: 'bar',
+                                        label: labelOption,
+                                        data: [9.0]
+                                    },
+                                            {
+                                        name: '门徒',
+                                        type: 'bar',
+                                        barGap: 0,
+                                        label: labelOption,
+                                        data: [8.7]
+                                    },
+                                    {
+                                        name: '唐人街探案2',
+                                        type: 'bar',
+                                        label: labelOption,
+                                        data: [8.5]
+                                    },
+                                    {
+                                        name:'前任3：再见前任',
+                                        type: 'bar',
+                                        label: labelOption,
+                                        data: [8.4]
+                                    },
+                                    {
+                                        name: '红海行动',
+                                        type: 'bar',
+                                        label: labelOption,
+                                        data: [8.3]
+                                    },
+                                            {
+                                        name: '热舞吧!青春',
+                                        type: 'bar',
+                                        barGap: 0,
+                                        label: labelOption,
+                                        data: [8.2]
+                                    },
+                                    {
+                                        name: '茉等花开',
+                                        type: 'bar',
+                                        label: labelOption,
+                                        data: [8.2]
+                                    },
+                                    {
+                                        name:  '给19岁的我自己',
+                                        type: 'bar',
+                                        label: labelOption,
+                                        data: [8.2]
+                                    },
+                                    {
+                                        name:'寻找爱情的下落',
+                                        type: 'bar',
+                                        label: labelOption,
+                                        data: [8.1]
+                                    },
+                                            {
+                                        name:'复仇者联盟3：无限战争',
+                                        type: 'bar',
+                                        label: labelOption,
+                                        data: [8.1]
+                                    },
+                                    {
+                                        name: '导火线',
+                                        type: 'bar',
+                                        label: labelOption,
+                                        data: [8.1]
+                                    },
+                                    {
+                                        name:'太阳照常升起',
+                                        type: 'bar',
+                                        label: labelOption,
+                                        data: [8.1]
+                                    }
+                                ]
+                            };
+                            if (option && typeof option === "object") {
+                                myChart2.setOption(option, true);
+                            }                        
+                            </script>
+
+
+                            <div id="container3" style="width:800px;height:600px;left:50px;"></div>  
+                            <script type="text/javascript">// 基于准备好的dom，初始化echarts实例
+                            var dom3 = document.getElementById("container3");
+                            var myChart3 = echarts.init(dom3);
+                            var app = {};
+                            option = null;    
+                            app.config = {
+                                rotate: 90,
+                                align: 'left',
+                                verticalAlign: 'middle',
+                                position: 'insideBottom',
+                                distance: 15,
+                                onChange: function () {
+                                    var labelOption = {
+                                        normal: {
+                                            rotate: app.config.rotate,
+                                            align: app.config.align,
+                                            verticalAlign: app.config.verticalAlign,
+                                            position: app.config.position,
+                                            distance: app.config.distance
+                                        }
+                                    };
+                                    myChart.setOption({
+                                        series: [{
+                                            label: labelOption
+                                        }, {
+                                            label: labelOption
+                                        }, {
+                                            label: labelOption
+                                        }, {
+                                            label: labelOption
+                                        }]
+                                    });
+                                }
+                            };
+
+
+                            var labelOption = {
+                                normal: {
+                                    show: true,
+                                    position: app.config.position,
+                                    distance: app.config.distance,
+                                    align: app.config.align,
+                                    verticalAlign: app.config.verticalAlign,
+                                    rotate: app.config.rotate,
+                                    formatter: '{c}  {name|{a}}',
+                                    fontSize: 16,
+                                    rich: {
+                                        name: {
+                                            textBorderColor: '#fcfcfc'
+                                        }
+                                    }
+                                }
+                            };
+
+                            option = {
+                                color: ['#6e7074', '#546570', '#c4ccd3'],
+                                tooltip: {
+                                    trigger: 'axis',
+                                    axisPointer: {
+                                        type: 'shadow'
+                                    }
+                                },
+                                title: {
+                                    text: 'Top 15 video_grade(iqiyi)',
+                                    left: 'center',
+                                    top: 20,
+                                    textStyle: {
+                                        color: '#999'
+                                    }
+                                },
+                                legend: {
+                                    data: ['Forest', 'Steppe', 'Desert', 'Wetland']
+                                },
+                                toolbox: {
+                                    show: true,
+                                    orient: 'vertical',
+                                    left: 'right',
+                                    top: 'center',
+                                    feature: {
+                                        mark: {show: true},
+                                        dataView: {show: true, readOnly: false},
+                                        magicType: {show: true, type: ['line', 'bar', 'stack', 'tiled']},
+                                        restore: {show: true},
+                                        saveAsImage: {show: true}
+                                    }
+                                },
+                                calculable: true,
+                                xAxis: [
+                                    {
+                                        type: 'category',
+                                        axisTick: {show: false},
+                                    }
+                                ],
+                                yAxis: [
+                                    {
+                                        type: 'value'
+                                    }
+                                ],
+                                series: [
+                                    {
+                                        name: '我们这一天',
+                                        type: 'bar',
+                                        barGap: 0,
+                                        label: labelOption,
+                                        data: [9.4]
+                                    },
+                                    {
+                                        name: '我的英雄学院 第3季',
+                                        type: 'bar',
+                                        label: labelOption,
+                                        data: [9.3]
+                                    },
+                                    {
+                                        name:'肖申克的救赎',
+                                        type: 'bar',
+                                        label: labelOption,
+                                        data: [9.3]
+                                    },
+                                    {
+                                        name:'武林外传',
+                                        type: 'bar',
+                                        label: labelOption,
+                                        data: [9.2]
+                                    },
+                                            {
+                                        name: '琅琊榜',
+                                        type: 'bar',
+                                        barGap: 0,
+                                        label: labelOption,
+                                        data: [9.2]
+                                    },
+                                    {
+                                        name: '擅长捉弄的高木同学',
+                                        type: 'bar',
+                                        label: labelOption,
+                                        data: [9.2]
+                                    },
+                                    {
+                                        name:'学园奶爸',
+                                        type: 'bar',
+                                        label: labelOption,
+                                        data: [9.2]
+                                    },
+                                    {
+                                        name: '战狼2',
+                                        type: 'bar',
+                                        label: labelOption,
+                                        data: [9.2]
+                                    },
+                                            {
+                                        name: '逃学威龙',
+                                        type: 'bar',
+                                        barGap: 0,
+                                        label: labelOption,
+                                        data: [9.2]
+                                    },
+                                    {
+                                        name: '扫毒',
+                                        type: 'bar',
+                                        label: labelOption,
+                                        data: [9.2]
+                                    },
+                                    {
+                                        name: '湄公河行动',
+                                        type: 'bar',
+                                        label: labelOption,
+                                        data: [9.2]
+                                    },
+                                    {
+                                        name:'逃学威龙2',
+                                        type: 'bar',
+                                        label: labelOption,
+                                        data: [9.2]
+                                    },
+                                            {
+                                        name:'闪光少女',
+                                        type: 'bar',
+                                        label: labelOption,
+                                        data: [9.2]
+                                    },
+                                    {
+                                        name:'凉生我们可不可以不忧伤',
+                                        type: 'bar',
+                                        label: labelOption,
+                                        data: [9.1]
+                                    },
+                                    {
+                                        name:'我不是药神',
+                                        type: 'bar',
+                                        label: labelOption,
+                                        data: [9.1]
+                                    }
+                                ]
+                            };
+                            if (option && typeof option === "object") {
+                                myChart3.setOption(option, true);
+                            }  
+                            </script>
+                        </div>
+                        <div class="col-md-8 col-sm-8 col-xs-12 mix ALL AREA">         
+                            <div id="main4" style="width:800px;height:600px;left:75px;"></div>
+                            <script type="text/javascript">// 基于准备好的dom，初始化echarts实例
+                                 // 基于准备好的dom，初始化echarts实例
+                            var myChart4 = echarts.init(document.getElementById('main4'));  
+                            option = {
+                                color: ['#c6e2ff', '#dda0dd', '#eed2ee'],
+                                title : {
+                                    text: 'Area Distribution',
+                                    subtext: 'left -- video_view, right -- video_grade',
+                                    x:'center',
+                                    top: 20,
+                                    textStyle: {
+                                        color: '#8a8a8a'
+                                    }
+                                },
+                                tooltip : {
+                                    trigger: 'item',
+                                    formatter: "{a} <br/>{b} : {c} ({d}%)"
+                                },
+                                legend: {
+                                    x : 'center',
+                                    y : 'bottom',
+                                    data:['rose1','rose2','rose3']
+                                },
+                                toolbox: {
+                                    show : true,
+                                    feature : {
+                                        mark : {show: true},
+                                        dataView : {show: true, readOnly: false},
+                                        magicType : {
+                                            show: true,
+                                            type: ['pie', 'funnel']
+                                        },
+                                        restore : {show: true},
+                                        saveAsImage : {show: true}
+                                    }
+                                },
+                                calculable : true,
+                                series : [
+                                    {
+                                        name:'video_view',
+                                        type:'pie',
+                                        radius : [30, 110],
+                                        center : ['25%', '50%'],
+                                        label: {
+                                            normal: {
+                                                show: true
+                                            },
+                                            emphasis: {
+                                                show: true
+                                            }
+                                        },
+                                        lableLine: {
+                                            normal: {
+                                                show: false
+                                            },
+                                            emphasis: {
+                                                show: true
+                                            }
+                                        },
+                                        data:[
+                                            {value:530943103, name:'China'},
+                                            {value:16846712, name:'Japan/Korea'},
+                                            {value:3425158, name:'Europe/America'},
+                                        ]
+                                    },
+                                    {
+                                        name:'video_grade',
+                                        type:'pie',
+                                        radius : [30, 110],
+                                        center : ['75%', '50%'],
+                                        roseType : 'radius',
+                                        data:[
+                                            {value:7.7, name:'China'},
+                                            {value:7.8, name:'Japan/Korea'},
+                                            {value:8.4, name:'Europe/America'}
+                                        ]
+                                    }
+                                ]
+                            };
+                            myChart4.setOption(option);
+                            </script>
+                        </div>
+                        <!-- single-portfolio end -->
+                 
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+        <!-- portfolio-area end -->
+
+        
+        
+        
+        
+        <!-- jquery
+		============================================ -->		
+        <script src="js/vendor/jquery-1.11.3.min.js"></script>
+        
+        <!-- price-slider JS
+		============================================ -->		
+        <script src="js/jquery-price-slider.js"></script>
+        
+		<!-- bootstrap JS
+		============================================ -->		
+        <script src="js/bootstrap.min.js"></script>
+		<!-- wow JS
+		============================================ -->		
+        <script src="js/wow.min.js"></script>
+		
+        <!-- Nivo slider js
+		============================================ --> 		
+		<script src="lib/js/jquery.nivo.slider.js" type="text/javascript"></script>
+		<script src="lib/home.js" type="text/javascript"></script>	
+        	
+		<!-- meanmenu JS
+		============================================ -->		
+        <script src="js/jquery.meanmenu.js"></script>
+        
+		<!-- owl.carousel JS
+		============================================ -->		
+        <script src="js/owl.carousel.min.js"></script>
+        
+		<!-- mixitup js -->
+        <script src="js/jquery.mixitup.min.js"></script>
+        
+        <!-- jquery.collapse js -->
+        <script src="js/jquery.collapse.js"></script>
+        
+        <!-- scrollUp JS
+		============================================ -->		
+        <script src="js/jquery.scrollUp.min.js"></script>
+        
+		<!-- plugins JS
+		============================================ -->		
+        <script src="js/plugins.js"></script>
+        
+		<!-- main JS
+		============================================ -->		
+        <script src="js/main.js"></script>
+    </body>
+</html>
