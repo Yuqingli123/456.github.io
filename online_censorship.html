@@ -1,0 +1,729 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title></title><link href='https://fonts.loli.net/css?family=PT+Serif:400,400italic,700,700italic&subset=latin,cyrillic-ext,cyrillic,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; tab-size: 4; background-position: inherit inherit; background-repeat: inherit inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) { 
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; }
+button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.701961); color: rgb(85, 85, 85); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px !important; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
+.CodeMirror-linenumber { }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit inherit; background-repeat: inherit inherit; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; background-repeat: initial initial; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print { 
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid-page; break-before: avoid-page; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid-page; }
+  .typora-export #write::after { height: 0px; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; background-position: initial initial; background-repeat: initial initial; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) { 
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; background-position: initial initial; background-repeat: initial initial; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; }
+a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; background-repeat: initial initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+svg[id^="mermaidChart"] { line-height: 1em; }
+mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); background-position: initial initial; background-repeat: initial initial; }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+
+
+/* meyer reset -- http://meyerweb.com/eric/tools/css/reset/ , v2.0 | 20110126 | License: none (public domain) */
+
+@include-when-export url(https://fonts.loli.net/css?family=PT+Serif:400,400italic,700,700italic&subset=latin,cyrillic-ext,cyrillic,latin-ext);
+
+/* =========== */
+
+:root {
+	--active-file-bg-color: #dadada;
+	--active-file-bg-color: rgba(32, 43, 51, 0.63);
+	--active-file-text-color: white;
+	--bg-color: #f3f2ee;
+	--text-color: #1f0909;
+	--control-text-color: #444;
+	--rawblock-edit-panel-bd: #e5e5e5;
+
+	--select-text-bg-color: rgba(32, 43, 51, 0.63);
+  --select-text-font-color: white;
+}
+
+pre {
+	--select-text-bg-color: #36284e;
+	--select-text-font-color: #fff;
+}
+
+html {
+	font-size: 16px;
+}
+
+html, body {
+	background-color: #f3f2ee;
+	font-family: "PT Serif", 'Times New Roman', Times, serif;
+	color: #1f0909;
+	line-height: 1.5em;
+}
+
+/*#write {
+	overflow-x: auto;
+    max-width: initial;
+	padding-left: calc(50% - 17em);
+    padding-right: calc(50% - 17em);
+}
+
+@media (max-width: 36em) {
+ 	#write {
+ 		padding-left: 1em;
+    	padding-right: 1em;
+ 	}
+}*/
+
+#write {
+	max-width: 40em;
+}
+
+ol li {
+	list-style-type: decimal;
+	list-style-position: outside;
+}
+ul li {
+	list-style-type: disc;
+	list-style-position: outside;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* styles */
+
+/* ====== */
+
+/* headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: bold;
+}
+h1 {
+	font-size: 1.875em;
+	/*30 / 16*/
+	line-height: 1.6em;
+	/* 48 / 30*/
+	margin-top: 2em;
+}
+h2,
+h3 {
+	font-size: 1.3125em;
+	/*21 / 16*/
+	line-height: 1.15;
+	/*24 / 21*/
+	margin-top: 2.285714em;
+	/*48 / 21*/
+	margin-bottom: 1.15em;
+	/*24 / 21*/
+}
+h3 {
+	font-weight: normal;
+}
+h4 {
+	font-size: 1.125em;
+	/*18 / 16*/
+	margin-top: 2.67em;
+	/*48 / 18*/
+}
+h5,
+h6 {
+	font-size: 1em;
+	/*16*/
+}
+h1 {
+	border-bottom: 1px solid;
+	margin-bottom: 1.875em;
+	padding-bottom: 0.8125em;
+}
+/* links */
+
+a {
+	text-decoration: none;
+	color: #065588;
+}
+a:hover,
+a:active {
+	text-decoration: underline;
+}
+/* block spacing */
+
+p,
+blockquote,
+.md-fences {
+	margin-bottom: 1.5em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-bottom: 1.5em;
+}
+/* blockquote */
+
+blockquote {
+	font-style: italic;
+	border-left: 5px solid;
+	margin-left: 2em;
+	padding-left: 1em;
+}
+/* lists */
+
+ul,
+ol {
+	margin: 0 0 1.5em 1.5em;
+}
+/* tables */
+.md-meta,.md-before, .md-after {
+	color:#999;
+}
+
+table {
+	margin-bottom: 1.5em;
+	/*24 / 16*/
+	font-size: 1em;
+	/* width: 100%; */
+}
+thead th,
+tfoot th {
+	padding: .25em .25em .25em .4em;
+	text-transform: uppercase;
+}
+th {
+	text-align: left;
+}
+td {
+	vertical-align: top;
+	padding: .25em .25em .25em .4em;
+}
+
+code,
+.md-fences {
+	background-color: #dadada;
+}
+
+code {
+	padding-left: 2px;
+	padding-right: 2px;
+}
+
+.md-fences {
+	margin-left: 2em;
+	margin-bottom: 3em;
+	padding-left: 1ch;
+	padding-right: 1ch;
+}
+
+pre,
+code,
+tt {
+	font-size: .875em;
+	line-height: 1.714285em;
+}
+/* some fixes */
+
+h1 {
+	line-height: 1.3em;
+	font-weight: normal;
+	margin-bottom: 0.5em;
+}
+
+p + ul,
+p + ol{
+	margin-top: .5em;
+}
+
+h3 + ul,
+h4 + ul,
+h5 + ul,
+h6 + ul,
+h3 + ol,
+h4 + ol,
+h5 + ol,
+h6 + ol {
+	margin-top: .5em;
+}
+
+li > ul,
+li > ol {
+	margin-top: inherit;
+	margin-bottom: 0;
+}
+
+li ol>li {
+	list-style-type: lower-alpha;
+}
+
+li li ol>li{
+	list-style-type: lower-roman;
+}
+
+h2,
+h3 {
+	margin-bottom: .75em;
+}
+hr {
+	border-top: none;
+	border-right: none;
+	border-bottom: 1px solid;
+	border-left: none;
+}
+h1 {
+	border-color: #c5c5c5;
+}
+blockquote {
+	border-color: #bababa;
+	color: #656565;
+}
+
+blockquote ul,
+blockquote ol {
+	margin-left:0;
+}
+
+.ty-table-edit {
+	background-color: transparent;
+}
+thead {
+	background-color: #dadada;
+}
+tr:nth-child(even) {
+	background: #e8e7e7;
+}
+hr {
+	border-color: #c5c5c5;
+}
+.task-list{
+	padding-left: 1rem;
+}
+
+.md-task-list-item {
+	padding-left: 1.5rem;
+	list-style-type: none;
+}
+
+.md-task-list-item > input:before {
+	content: '\221A';
+	display: inline-block;
+	width: 1.25rem;
+  	height: 1.6rem;
+	vertical-align: middle;
+	text-align: center;
+	color: #ddd;
+	background-color: #F3F2EE;
+}
+
+.md-task-list-item > input:checked:before,
+.md-task-list-item > input[checked]:before{
+	color: inherit;
+}
+
+#write pre.md-meta-block {
+	min-height: 1.875rem;
+	color: #555;
+	border: 0px;
+	background: transparent;
+	margin-top: -4px;
+	margin-left: 1em;
+	margin-top: 1em;
+}
+
+.md-image>.md-meta {
+	color: #9B5146;
+}
+
+.md-image>.md-meta{
+	font-family: Menlo, 'Ubuntu Mono', Consolas, 'Courier New', 'Microsoft Yahei', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', serif;
+}
+
+
+#write>h3.md-focus:before{
+	left: -1.5rem;
+	color:#999;
+	border-color:#999;
+}
+#write>h4.md-focus:before{
+	left: -1.5rem;
+	top: .25rem;
+	color:#999;
+	border-color:#999;
+}
+#write>h5.md-focus:before{
+	left: -1.5rem;
+	top: .0.3125rem;
+	color:#999;
+	border-color:#999;
+}
+#write>h6.md-focus:before{
+	left: -1.5rem;
+	top: 0.3125rem;
+	color:#999;
+	border-color:#999;
+}
+
+.md-toc:focus .md-toc-content{
+	margin-top: 19px;
+}
+
+.md-toc-content:empty:before{
+	color: #065588;
+}
+.md-toc-item {
+	color: #065588;
+}
+#write div.md-toc-tooltip {
+	background-color: #f3f2ee;
+}
+
+#typora-sidebar {
+	background-color: #f3f2ee;
+	-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.375);
+  	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.375);
+}
+
+.pin-outline #typora-sidebar {
+	background: inherit;
+	box-shadow: none;
+	border-right: 1px dashed;
+}
+
+.pin-outline #typora-sidebar:hover .outline-title-wrapper {
+	border-left:1px dashed;
+}
+
+.outline-item:hover {
+  background-color: #dadada;
+  border-left: 28px solid #dadada;
+  border-right: 18px solid #dadada;
+}
+
+.typora-node .outline-item:hover {
+  	border-right: 28px solid #dadada;
+}
+
+.outline-expander:before {
+  content: "\f0da";
+  font-family: FontAwesome;
+  font-size:14px;
+  top: 1px;
+}
+
+.outline-expander:hover:before,
+.outline-item-open>.outline-item>.outline-expander:before {
+  content: "\f0d7";
+}
+
+.modal-content {
+	background-color: #f3f2ee;
+}
+
+.auto-suggest-container ul li {
+	list-style-type: none;
+}
+
+/** UI for electron */
+
+.megamenu-menu,
+#top-titlebar, #top-titlebar *,
+.megamenu-content {
+	background: #f3f2ee;
+	color: #1f0909;
+}
+
+.megamenu-menu-header {
+	border-bottom: 1px dashed #202B33;
+}
+
+.megamenu-menu {
+	box-shadow: none;
+	border-right: 1px dashed;
+}
+
+header, .context-menu, .megamenu-content, footer {
+	font-family: "PT Serif", 'Times New Roman', Times, serif;
+    color: #1f0909;
+}
+
+#megamenu-back-btn {
+	color: #1f0909;
+	border-color: #1f0909;
+}
+
+.megamenu-menu-header #megamenu-menu-header-title:before {
+	color: #1f0909;
+}
+
+.megamenu-menu-list li a:hover, .megamenu-menu-list li a.active {
+	color: inherit;
+	background-color: #e8e7df;
+}
+
+.long-btn:hover {
+	background-color: #e8e7df;
+}
+
+#recent-file-panel tbody tr:nth-child(2n-1) {
+    background-color: transparent !important;
+}
+
+.megamenu-menu-panel tbody tr:hover td:nth-child(2) {
+    color: inherit;
+}
+
+.megamenu-menu-panel .btn {
+	background-color: #D2D1D1;
+}
+
+.btn-default {
+	background-color: transparent;
+}
+
+.typora-sourceview-on #toggle-sourceview-btn,
+.ty-show-word-count #footer-word-count {
+	background: #c7c5c5;
+}
+
+#typora-quick-open {
+    background-color: inherit;
+}
+
+.md-diagram-panel {
+	margin-top: 8px;
+}
+
+.file-list-item-file-name {
+	font-weight: initial;
+}
+
+.file-list-item-summary {
+	opacity: 1;
+}
+
+.file-list-item {
+	color: #777;
+}
+
+.file-list-item.active {
+	background-color: inherit;
+	color: black;
+}
+
+.ty-side-sort-btn.active {
+	background-color: inherit;
+}
+
+.file-list-item.active .file-list-item-file-name  {
+	font-weight: bold;
+}
+
+.file-list-item{
+    opacity:1 !important;
+}
+
+.file-library-node.active>.file-node-background{
+	background-color: rgba(32, 43, 51, 0.63);
+	background-color: var(--active-file-bg-color);
+}
+
+.file-tree-node.active>.file-node-content{
+	color: white;
+	color: var(--active-file-text-color);
+}
+
+.md-task-list-item>input {
+	margin-left: -1.7em;
+	margin-top: calc(1rem - 12px);
+}
+
+input {
+	border: 1px solid #aaa;
+}
+
+.megamenu-menu-header #megamenu-menu-header-title,
+.megamenu-menu-header:hover, 
+.megamenu-menu-header:focus {
+	color: inherit;
+}
+
+.dropdown-menu .divider {
+	border-color: #e5e5e5;
+}
+
+/* https://github.com/typora/typora-issues/issues/2046 */
+.os-windows-7 strong,
+.os-windows-7 strong  {
+	font-weight: 760;
+}
+
+.ty-preferences .btn-default {
+	background: transparent;
+}
+
+.ty-preferences .window-header {
+	border-bottom: 1px dashed #202B33;
+	box-shadow: none;
+}
+
+#sidebar-loading-template, #sidebar-loading-template.file-list-item {
+	color: #777;
+}
+
+
+</style>
+</head>
+<body class='typora-export' >
+<div  id='write'  class = 'is-mac'><p><strong><span>Confronting online scrutiny: Doing social science research in the context of internet censorship in China.</span></strong></p><p><strong><span>Abstract</span></strong></p><p><span>The internet has been tightly censored in many countries to strengthen political control over the years. On the one hand, the suppression of public communication provides opportunities for researchers to study the mechanism of internet and state control in authoritarian countries. On the other hand, many social scientists themselves confront tightening online censorship during research activities. Internet scrutiny is complicating the situation of social science research nowadays. In this article, I will draw on my own research experience of internet censorship in China and discuss how researchers could better formulate research questions and collect online data in the context of internet scrutiny. Beyond that, I call for an active attitude in tackling the problem and discuss attempts and strategies to navigate sensitivity during research.</span></p><p><strong><span>Introduction</span></strong></p><p><span>When I started to design an online questionnaire on feminist attitudes among Chinese college students, I have never anticipated that it would confront internet censorship at the end of the data-gathering procedure and was blocked along with all the responses. I grumbled to my friend, who was doing social research as well. She told me: “Last year, I met the same situation when I helped with an NGO distributing online questionnaires on domestic violence.” The internet has become a vital resource and implements for social science research to date. Many researchers in the field of psychology, sociology, and media studies have carried their research on the internet (Buchanan &amp; Smith, 1999; Davis, 1999). Though, researchers who study on sensitive topics are facing hurdles imposed by the strict online scrutiny in authoritarian states. The objective of this article is to evoke and increase researchers’ awareness of the potential impediments and risks in the context of internet censorship. In the first section, I will review how censorship influences researchers in identifying research questions and collecting data. In the second section, I will reflect on my feminist research experience in China as an empirical case and introduce my attempts and strategies to manage sensitivity.</span></p><p><strong><span>The implication of online censorship on social science research</span></strong></p><p><em><span>Identifying the research question in the context of internet scrutiny</span></em></p><p><span>The internet regulation mechanism provides abundant research opportunities to researchers who are specialized in studying authoritarian countries and the intersection of technology and society. Recent studies have examined how internet censorship discourages netizens contributing contents online (Lindtner et al., 2008; Shklovski &amp; Kotamraju, 2011), the ways in which censorship influences discussions on social media (Chen, Zhang, &amp; Wilson, 2013), and its adverse effects on government’s credibility (Richet, 2013). Other researchers incorporate it into a specific civil rights issue. For instance, Rachel Harris and Aziz Isa (2011) studied internet control in Uyghur and suggested that this practice reflected broader governmental concerns about the internet’s capability in mobilizing protestors.</span></p><p><span>While there are many research questions in the context of online scrutiny, researchers need to pay attention to the applicability and feasibility of theories and conclusions in different socio-cultural and institutional settings. Though the internet does not have explicit national boundaries, it can present distinct online censorship environment due to different levels of state control. While Iran has launched its own version of YouTube, Wikipedia is available in Iran in its entirety (Clark et al., 2017). As for Turkey, it is building a domestic search engine and email service to replace Wikipedia. And China further pays efforts in restricting online information and communication on its home-grown platform (Clark et al., 2017). Concerning the progressive degrees of online censorship, social scientists therefore should contextualize their research questions in its specific setting when studying sensitive topics in authoritarian states.</span></p><p><em><span>Data collection and sensitivity navigation</span></em></p><p><span>Doing social science research in China, as Sam Berlin stated (2019), can be challenging, since official statistics can be unreliable, important information is kept out of the public eye, safety is hard to guarantee, and access is difficult to secure. Mette Hansen (2006) also figures out that short term fieldwork produces a remarkable amount of data, but this may be treated more as an example of official or semi-official discourse than a reflection of life in a given community. Similar to the data gathered through ethnographic fieldwork, online communication and information could also be filtered.</span></p><p><span>Currently, internet tools have been employed by many social science researchers in data collection. In particular, crawling internet information and distributing online questionnaires are two important methods. Yet, under the online scrutiny, internet information could be cleared, an online questionnaire may be blocked, and the researcher risk in divulging personal information. Authorities of the Ministry of Public Security (MPS) of China has worked with technology experts at Shenzhen University to develop an “e-mail filtration system” that is able to detect and delete “unwanted” e-mails (Walton, 2001). In addition, the MPS announced in 2000 that within three years it would have created a nationwide computerized database containing personal details and ID number for every adult in the country (Walton, 2001).</span></p><p><span>These require researchers managing online behaviors and conducting self-censorship properly. Indeed, confronting censorship by researchers themselves does happen and in fact more frequently. According to research (Greitens &amp; Truex, 2018) on China Scholar Research Experience Survey (CSRES), roughly 9 percent of China scholars report that they have been “invited to tea” by officials within the past ten years, and 5 percent of researchers report difficulty in obtaining a visa. Calibrate risk, protect interlocutors, and appropriately manage sensitive inquiries are particularly important for early-career researchers to navigate research in China (Greitens &amp; Truex, 2018).</span></p><p><span>To mitigate the risk of being censored, researchers need to adopt strategies such as self-censorship to navigate the sensitivity. For qualitative researchers working with living people, self-censorship in the fieldwork might be a way of saying “protecting the people around you” – a core ethical research practice (Greitens &amp; Truex, 2018). Self-censorship could also be another way of saying “knowing when to keep your mouth shut (Greitens &amp; Truex, 2018).” Greitens and Truex (2018) summarized the strategies adopted by the CSRES sample in reducing risk during research: One half of the researchers use different languages to describe projects; nearly a quarter choose to adapt their research questions away from the most sensitive topics; some even have abandoned their project completely; a few scholars publish their article anonymously. Considering the sensitivity of many social research topics, self-censorship on internet behaviors for social scientists is an inevitable step to conduct research effectively and safely.</span></p><p><strong><span>Empirical study: the case of feminist research in China</span></strong></p><p><em><span>From researching feminist movements to feminist attitudes</span></em></p><p><span>In the context of censorship, the online social movement in China might develop in different patterns. Initially, I intended to analyze how the #MeToo movement in China builds up solidarity in feminist communities and supposedly facilitates offline collective action. Sizeable research has investigated the polarizing function of social media (Mousavi &amp; Gu, 2014), and the relationship between online and offline participation in a feminist/social movement (Flores, Gómez, Roa, &amp; Whitson, 2018; Ogan, Giglou, &amp; d’Haenens, 2016). But their empirical case analysis is not contextualized in authoritarian countries where censorship plays a critical role in movements organization. Though many females were empowered through the #MeToo movement, online censorship was deployed at the burgeoning stage of #MeToo in China (Yang, 2018), as to dissolve the “uncertainties” of the state regime. Besides, China allows little space for NGOs and individuals to pursue right-based feminist advocacy, with feminists detained and relevant organizations curtailed (Jiang, 2019). Offline movements are thereby almost invisible, not to mention blooming nationally. In this situation, I reframed my research question and turned to study how discourses of feminist bloggers impact the attitudes of social media users on women’s rights.</span></p><p><em><span>Blocked feminist bloggers and online questionnaire</span></em></p><p><span>One major impediment of my research on feminist bloggers is that internet censorship blocked representative bloggers during the #MeToo movement. Their blogs were deleted alongside. The entitled “#MeToo super-topic” (女权超话, discussion forum in Sina Weibo – Chinese version of Twitter) was substantially cleared, only remaining a few blogs posting in English. This posed great difficulty for researchers to recover the information online. But there are still several ways to trace back the blocked accounts. For those feminist bloggers who were blocked previously, they would usually register another account and reassert their opinions and allegations on other women’s rights topics. It provides me an opportunity to observe their tones, wording, as well as feminist attitudes and goals. Their strategies, with the experiences of being blocked once or more, to circumvent internet censorship also enables me to observe more than what I could see on other bloggers’ homepages.</span></p><p><span>Collecting college students’ feminist attitudes and their use of social media is the next and an essential step in my research. In the process of distributing questionnaires, however, I confronted internet censorship. Adopting an 11-item short form of Liberal Feminist Attitude and Ideology Scale (Morgan, 1996), I translated the test questions into Chinese without carefully censoring the wording. One day after launching the online questionnaire, the website requested me uploading personal information to ensure that the questionnaire could continue collecting responses. A few days later, a further request from the website asked for the seal of the working unit or school on “Data Use Agreement” (数据使用承诺), mentioning that my questionnaire involved sensitive words. By far, I was neither able to download my data from the website, nor ensure the safety of my personal information.</span></p><p><em><span>Self-censorship and alternative methods</span></em></p><p><span>After being blocked on the questionnaire website, I asked for the help of my instructor to re-evaluate the wording. Some translations have spaces to negotiate to circumvent artificial intelligent filtering without changing their connotations. Some sensitive wordings might need to be substituted by other test questions in measuring the feminist attitudes of respondents.</span></p><p><span>Firstly, “feminist (女权)” and “citizen + movement (公民+运动)” on the questionnaire should berephrased by “women’s rights (女性权益)” and “people’s movement (人民运动).” In a western context, feminist often appears in the discussion of civil rights. During the 1960s, the second wave of feminist movement was exactly influenced and inspired by the Civil Rights Movement (Christensen &amp; Levinson, 2003). Inversely, authoritarian governments that try to restrain and suppress potential protests and uncertainties are cautious about feminist movements, so as to mitigate the threat of broader civil rights campaigns. Therefore, in order to circumvent keyword censoring, it is suggested to avoid wordings associated with defiance and demand for civil rights.</span></p><p><span>Secondly, the attitude question “A radical restructuring of society is needed to overcome status inequalities between sexes (为了转变目前性别不平等的状态，我们需要一个彻底的社会重构)” should be replaced by alternative questions. Though keyword filtering might not be able to identify the embedded idea of collective action, manual censorship sometimes would work on evaluating the questions if there is any other heedless miss. Indeed, the website declares that manual inspection would scan the overall design of the questionnaire once the artificial intelligent reports anomaly. A backup choice to measure feminist attitudes on collective action is “A ‘women’s movement’ is basically irrelevant to the most vital concerns of our society (女性运动基本上已经脱离我们社会上最重要的 关注点).”</span></p><p><span>In China, a wide range of topics and keywords are censored on the internet. For researchers who have never confronted online scrutiny, self-censorship can be a daunting task. Luckily, 13 lists of censored and sensitive Chinese keywords have been uploaded on the GitHub repository. This dataset contains more than 9,000 words and phrases, including those in Chinese, English, pinyin, and a mixture of the three. Researchers could then re-examine their narratives referencing to these wordlists. One more method to ensure security is to use foreign online questionnaire websites. A few questionnaire tools developed by foreign companies could be accessed by Chinese IP addresses. I do not introduce specifics here to avoid tightening control on these websites.</span></p><p><strong><span>Concluding remarks</span></strong></p><p><span>This article attempts to shed light on the impact of internet censorship on social science research. Whereas the censorship mechanism itself introduces abundant research opportunities to social scientists, researchers also confront online scrutiny during research activities. My feminist research experience in China provides a good illustration of the importance of contextualizing research questions under the internet scrutiny as well as self-censoring online behaviors and data-collecting practices. The implication of online censorship in social research can be summarized in three aspects:</span></p><p><span>First and foremost, the changing institutional settings on online public communication requires a recontextualization of research questions. More specifically, the function of social media in precipitating collective actions cannot be overestimated in authoritarian countries with tight online censorship. Similarly, the development model of online social movements should not be analogically extrapolated from countries with open internet environment to authoritarian states.</span></p><p><span>Secondly, the information security of social scientists themselves is not guaranteed when conducting online research activities in authoritarian states. Researchers are regularly required to upload personal information in order to obtain network data. The information is recorded into the database of the official departments, which left some potential troubles for the safety of researchers. Lastly, the data-collecting process may be affected or even interrupted by the censorship technology. One the one hand, the existing online information might be a filtered or curtailed version, which means the crawled data cannot represent the reality of historical events. On the other hand, researchers who collect survey data through domestic online tools take the risk of being blocked. The keyword filtering and other censorship techniques, cooperated with manual checking from the website, would forestall academic research activities that involve any sensitivity.</span></p><p><span>Online tools and the abundant internet information should have empowered social scientists in conducting academic research. However, the very political nature of censorship technology is regulating the capacity and agency of researchers to develop their research topics and activities. In such context, self-censorship does not mean to avoid any touch on the sensitivity in research topics, that is, to conform to the ultimate purpose of the governmental surveillance. Instead, it should be regarded as a way to calibrate the risk and seek for an executable approach towards the research questions without immoderate political intervention, and finally propose a relatively complete picture of the society.</span></p><p><strong><span>References</span></strong></p><p><span>Berlin, S. (2019). On Becoming a ‘Blue-eyed, Blond American Friend’: Difficult Fieldwork, Positionality, and Becoming a Participant- researcher. </span><em><span>Made In China, vol. 3</span></em><span>, pp. 108 - 111.</span></p><p><span>Buchanan, T., &amp; Smith, J. L. (1999). Using the internet for psychological research: personality testing on the World Wide Web. </span><em><span>British Journal of Psychology, 90</span></em><span>, 125 -144.</span></p><p><span>Chen, L., Zhang, C., &amp; Wilson, C. (2013). </span><em><span>Tweeting under pressure: Analyzing trending topics and 846 evolving word choice on Sina Weibo.</span></em><span> Paper presented at the In Proceedings of the 1st ACM Conference on Online Social Networks, ACM.</span></p><p><span>Christensen, K., &amp; Levinson, D. (2003). </span><em><span>Encyclopedia of Community: From the Village to the Virtual World</span></em><span> (Vol. 1): SAGE Publications, Inc.</span></p><p><span>Clark, J., Faris, R., Morrison-Westphal, R., Noman, H., Tilton, C., &amp; Zittrain, J. (2017). </span><em><span>The Shifting Landscape of Global Internet Censorship</span></em><span>.</span></p><p><span>Davis, R. (1999). Web-based administration of a personality questionnaire: comparison with traditional methods. </span><em><span>Behaviour Research Methods, Instruments &amp; Computers, 31</span></em><span>(4), 572 - 577.</span></p><p><span>Flores, P., Gómez, N. R., Roa, A. F., &amp; Whitson, R. (2018). Reviving feminism through social media: from the classroom to online and offline public spaces. </span><em><span>Gender and Education</span></em><span>. doi:10.1080/09540253.2018.1513454</span></p><p><span>Greitens, S. C., &amp; Truex, R. (2018). Repressive Experiences among China Scholars: New Evidence from Survey Data. </span><em><span>The China Quarterly</span></em><span>, pp. 1 - 27. doi:</span><a href='http://dx.doi.org/10.2139/ssrn.3243059' target='_blank' class='url'>http://dx.doi.org/10.2139/ssrn.3243059</a></p><p><span>Hansen, M. H. (2006). In the Footsteps of the Communist Party: Dilemmas and Strategies. In M. Heimer &amp; S. Thøgersen (Eds.), </span><em><span>Doing Fieldwork in China</span></em><span> (pp. 81-95). Denmark: NIAS Press.</span></p><p><span>Harris, R., &amp; Isa, A. (2011). Invitation to a Mourning Ceremony&#39;: Perspectives on the Uyghur Internet. </span><em><span>Inner Asia, 13</span></em><span>(1), pp. 27-49. </span></p><p><span>Jiang, J. (2019). Women’s Rights and Gender Equality in China: The Development and Struggle in Chains of State Feminism. In S.Biddulph &amp; J. Rosenzweig (Eds.), </span><em><span>Handbook on Human Rights in China</span></em><span>: Edward Elgar Publishing. </span></p><p><span>Lindtner, S., Nardi, B., Wang, Y., Mainwaring, S., Jing, H., &amp; Liang, W. (2008). </span><em><span>A hybrid cultural ecology: World of Warcraft in China.</span></em><span> Paper presented at the In Proceedings of the 2008 ACM Conference on Computer Supported Cooperative Work, ACM. </span></p><p><span>Morgan, B. L. (1996). Putting the Feminism into Feminism Scales: Introduction of a Liberal Feminist Attitude and Ideology Scale(LFAIS). </span><em><span>Sex Roles, 34</span></em><span>(5/6), 359 - 190.</span></p><p><span>Mousavi, S., &amp; Gu, B. (2014). </span><em><span>The Role of Online Social Networks in Political Polarization</span></em><span>. Paper presented at the Twentieth Americas Conference on Information Systems, Savannah.</span></p><p><span>Ogan, C., Giglou, R. I., &amp; d’Haenens, L. (2016). The Relationship between Online and Offline Participation in a Social Movement: Gezi Park Protests in the Diaspora. In </span><em><span>Taking the Square - Mediated Dissent and Occupations of Public Space</span></em><span>: Rowman &amp; Littlefield. </span></p><p><span>Qiang, X. (2011). Liberation Technology: The Battle for the Chinese Internet. </span><em><span>Journal of Democracy, 22</span></em><span>(2), 47-61. doi:doi:10.1353/jod.2011.0020</span></p><p><span>Richet, J.-L. (2013). Overt censorship: A fatal mistake? . </span><em><span>Commun. ACM, 56</span></em><span>(8), 37-38. </span></p><p><span>Shklovski, I., &amp; Kotamraju, N. (2011). </span><em><span>Online contribution practices in countries that engage in Internet blocking and censorship.</span></em><span> Paperpresented at the In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems, ACM.</span></p><p><span>Walton, G. (2001). </span><em><span>China&#39;s Golden Shield: Corporations and the Development of Surveillance Technology in the People&#39;s Republic of</span></em><span> </span><em><span>China</span></em><span>: Rights &amp; Democracy.</span></p><p><span>Wang, D., &amp; Mark, G. (2015). Internet Censorship in China: Examining User Awareness and Attitudes. </span><em><span>ACM Trans. Comput.-Hum.</span></em><span>Interact., 22*(6). doi: </span><a href='http://dx.doi.org/10.1145/2818997' target='_blank' class='url'>http://dx.doi.org/10.1145/2818997</a></p><p><span>Yang, Y. (2018). China’s ‘MeToo’ movement evades censors with #RiceBunny. </span><em><span>Financial Times</span></em><span>. Retrieved from </span><a href='https://www.ft.com/content/61903744-9540-11e8-b67b-b8205561c3fe' target='_blank' class='url'>https://www.ft.com/content/61903744-9540-11e8-b67b-b8205561c3fe</a></p></div>
+</body>
+</html>
